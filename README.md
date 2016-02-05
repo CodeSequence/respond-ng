@@ -1,7 +1,7 @@
 # respond-ng
 #### Simple Mocking API for Angular 2's Http Service
 
-To use, install the package with npm:
+To use, install respond-ng with npm:
 
 ```
 npm install respond-ng --save-dev
@@ -13,7 +13,7 @@ Import the providers and Respond:
 import HTTP_MOCK_PROVIDERS, {Respond} from 'respond-ng';
 ```
 
-Create an injector then use the injector to get an instance of Respond
+Create an injector, then use the injector to get an instance of Respond
 and the service you are testing:
 
 ```ts
@@ -26,6 +26,7 @@ beforeEach(function(){
   ]);
 
   respond = injector.get(Respond);
+  auth = injector.get(AuthService);
 });
 ```
 
@@ -42,9 +43,9 @@ it('should check if the user is authenticated', function(done){
 });
 ```
 
-After each test, make sure you verify there are no outstanding requests:
+After each test, verify there are no outstanding requests:
 ```ts
-afterEach(respond.verifyComplete());
+afterEach(() => respond.verifyComplete());
 ```
 
-Happy testing!
+For more information, see docs for [Respond](docs/respond.md) and [RequestMatcher](docs/request-matcher.md). Happy testing!

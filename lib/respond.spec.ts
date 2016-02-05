@@ -57,6 +57,15 @@ describe('Respond', function(){
     expect(res.json()).toEqual(body);
   });
 
+  it('should re-initialize itself after serialization to allow for re-use', () => {
+    const res = respond.withUrl('/api').withStatus(404).withBody('test').serialize();
+    const nextRes = respond.serialize();
+
+    expect(res.url).not.toEqual(nextRes.url);
+    expect(res.status).not.toEqual(nextRes.status);
+    expect(res.text()).not.toEqual(nextRes.text());
+  });
+
   it('should create a request matcher and add it to the responder', () => {
     const matcher = respond.when;
 

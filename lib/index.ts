@@ -1,6 +1,6 @@
-import {provide, Provider} from 'angular2/core';
-import {MockBackend} from 'angular2/http/testing';
-import {Http, BaseRequestOptions} from 'angular2/http';
+import {provide, Provider} from '@angular/core';
+import {MockBackend} from '@angular/http/testing';
+import {Http, BaseRequestOptions} from '@angular/http';
 import {Respond} from './respond';
 import {HttpResponder} from './http-responder';
 import {RequestMatcher} from './request-matcher';

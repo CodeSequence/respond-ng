@@ -1,4 +1,4 @@
-import {Request, RequestMethod, Response} from 'angular2/http';
+import {Request, RequestMethod, Response} from '@angular/http';
 
 export class RequestMatcher{
   private _used = false;

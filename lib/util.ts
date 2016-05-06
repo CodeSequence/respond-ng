@@ -1,4 +1,4 @@
-import {RequestMethod} from 'angular2/http';
+import {RequestMethod} from '@angular/http';
 
 export function methodToString(method: RequestMethod){
   switch(method){

@@ -7,7 +7,7 @@ import {
   ResponseOptionsArgs,
   RequestOptionsArgs,
   RequestMethod
-} from 'angular2/http';
+} from '@angular/http';
 
 interface RequestArgs extends RequestOptionsArgs { url: string; }
 

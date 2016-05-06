@@ -1,6 +1,6 @@
-import {Injectable, Inject} from 'angular2/core';
-import {MockBackend, MockConnection} from 'angular2/http/testing';
-import {Response, Headers, ResponseOptions} from 'angular2/http';
+import {Injectable, Inject} from '@angular/core';
+import {MockBackend, MockConnection} from '@angular/http/testing';
+import {Response, Headers, ResponseOptions} from '@angular/http';
 import {RequestMatcher} from './request-matcher';
 import {HttpResponder} from './http-responder';
 

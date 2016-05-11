@@ -5,9 +5,6 @@ module.exports = function(config) {
     frameworks: ['jasmine'],
     browsers: ['Chrome'],
     files: [
-      {pattern: 'node_modules/zone.js/dist/zone-microtask.js', watched: false},
-      {pattern: 'node_modules/zone.js/dist/long-stack-trace-zone.js', watched: false},
-      {pattern: 'node_modules/zone.js/dist/jasmine-patch.js', watched: false},
       'tests.bundle.js'
     ],
 
